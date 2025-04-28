@@ -113,15 +113,18 @@ main {
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.07);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
   will-change: transform;
   position: relative;
   overflow: hidden;
 }
 
+
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
+
 
 .project-card h2 {
   font-size: 1.35rem;
@@ -387,36 +390,5 @@ nav ul li a i {
   nav ul li a i {
     display: none !important;
   }
-}
-
-/* === Dark Mode Styles === */
-body.dark-mode {
-  background-color: #121212;
-  color: #f9f9f9;
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-.dark-mode header,
-.dark-mode footer {
-  background-color: #1f1f1f;
-}
-
-.dark-mode .project-card {
-  background: linear-gradient(to bottom, #1f1f1f, #2c2c2c);
-  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.08);
-}
-
-.dark-mode nav ul {
-  background-color: #1f1f1f;
-}
-
-.dark-mode nav ul li a {
-  color: #f9f9f9;
-}
-
-.dark-mode nav ul li a:hover,
-.dark-mode nav ul li a:focus {
-  background-color: #333;
-  color: #00bfa5;
 }
 
