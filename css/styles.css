@@ -255,6 +255,24 @@ footer {
   }
 }
 
+/* === Animated Tech Icon Hover === */
+.tech-icon {
+  transition: transform 0.4s ease, background-color 0.4s ease;
+  cursor: default;
+}
+
+.tech-icon:hover {
+  transform: scale(1.15) rotate(5deg);
+  background-color: #b2dfdb;
+}
+
+/* === Project Card Enhanced Hover (Breathing Effect) === */
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+
 /* === FILTER BAR === */
 .filter-bar {
   text-align: center;
