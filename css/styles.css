@@ -286,7 +286,6 @@ footer {
 
 /* === Project Card Enhanced Hover (Breathing Effect) === */
 .project-card:hover {
-  transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
