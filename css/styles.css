@@ -70,6 +70,20 @@ nav ul li a.active {
   border-bottom: 2px solid white;
 }
 
+/* === Enhanced Nav Link Hover Animation === */
+nav ul li a {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #ffffff;
+  color: #004d40;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 77, 64, 0.2);
+}
+
+
 /* === MAIN CONTENT === */
 main {
   padding: 2rem 1rem;
