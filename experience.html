@@ -67,6 +67,8 @@
         <li><a href="experience.html" class="nav-link"><i class="fas fa-briefcase"></i>Experience</a></li>
         <li><a href="portfolio.html" class="nav-link"><i class="fas fa-th"></i>Portfolio</a></li>
       </ul>
+      <!-- Dark Mode Toggle Button -->
+      <button id="themeToggle" class="button" style="margin: 10px;">🌙 Toggle Dark Mode</button>
     </nav>
   </header>
 
@@ -74,7 +76,17 @@
     <section class="portfolio animate-fade-in">
       <h1 class="section-title">Professional Experience</h1>
 
-      <div class="project-card animate-slide-in">
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="AWS">AWS</button>
+        <button class="filter-btn" data-filter="Terraform">Terraform</button>
+        <button class="filter-btn" data-filter="CI/CD">CI/CD</button>
+        <button class="filter-btn" data-filter="Security">Security</button>
+      </div>
+
+      <!-- Cards with data-tags -->
+      <div class="project-card animate-slide-in" data-tags="AWS Terraform CI/CD Security">
         <h2><i class="fas fa-building"></i> Sovereign Technology & Innovation Ltd | DevOps Engineer</h2>
         <p><strong>August 2024 – Present</strong></p>
         <ul>
@@ -94,7 +106,7 @@
         </div>
       </div>
 
-      <div class="project-card animate-slide-in">
+      <div class="project-card animate-slide-in" data-tags="AWS Terraform Security">
         <h2><i class="fas fa-globe"></i> Help.NGO | DevOps Engineer (Remote)</h2>
         <p><strong>December 2023 – Present</strong></p>
         <ul>
@@ -111,7 +123,7 @@
         </div>
       </div>
 
-      <div class="project-card animate-slide-in">
+      <div class="project-card animate-slide-in" data-tags="AWS GCP CI/CD Machine Learning">
         <h2><i class="fas fa-briefcase"></i> Freelance Cloud Architect | Contract Roles</h2>
         <p><strong>May 2021 – Present</strong></p>
         <ul>

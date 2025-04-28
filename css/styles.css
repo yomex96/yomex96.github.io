@@ -113,6 +113,7 @@ main {
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.07);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
   position: relative;
   overflow: hidden;
 }
@@ -302,6 +303,24 @@ footer {
   font-size: 1rem;
 }
 
+.filter-btn {
+  background-color: #004d40;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0.3rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: #00695c;
+  transform: scale(1.05);
+}
+
+
 /* === MOBILE OVERRIDES === */
 @media (max-width: 768px) {
   .hamburger {
@@ -370,4 +389,34 @@ nav ul li a i {
   }
 }
 
+/* === Dark Mode Styles === */
+body.dark-mode {
+  background-color: #121212;
+  color: #f9f9f9;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
+.dark-mode .project-card {
+  background: linear-gradient(to bottom, #1f1f1f, #2c2c2c);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode nav ul {
+  background-color: #1f1f1f;
+}
+
+.dark-mode nav ul li a {
+  color: #f9f9f9;
+}
+
+.dark-mode nav ul li a:hover,
+.dark-mode nav ul li a:focus {
+  background-color: #333;
+  color: #00bfa5;
+}
 
