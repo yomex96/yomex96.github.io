@@ -1,3 +1,4 @@
+
 /* === IMPORTS === */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
@@ -9,6 +10,18 @@
   box-sizing: border-box;
 }
 
+/* === VARIABLES === */
+:root {
+  --primary: #003366;
+  --accent: #00b894; /* Cooler green */
+  --light: #ecf0f1;
+  --dark: #2d3436;
+  --hover: #005f73;
+  --text-light: #fff;
+  --radius: 10px;
+}
+
+/* === BASE === */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -17,16 +30,6 @@ body {
   color: #1c1e21;
   line-height: 1.6;
   overflow-x: hidden;
-}
-
-/* === COLORS === */
-:root {
-  --primary: #003366;
-  --accent: #00b894;
-  --light: #ecf0f1;
-  --dark: #2d3436;
-  --hover: #005f73;
-  --text-light: #fff;
 }
 
 /* === HEADER & NAVIGATION === */
@@ -56,7 +59,7 @@ nav ul li a {
   font-weight: 600;
   font-size: 1rem;
   padding: 0.75rem 1rem;
-  border-radius: 8px;
+  border-radius: var(--radius);
   transition: 0.3s ease all;
 }
 
@@ -79,8 +82,13 @@ nav ul li a.active {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
   border-radius: 0 0 40px 40px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
+
+.hero img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 
 .hero h1 {
   font-size: 2.5rem;
@@ -90,7 +98,7 @@ nav ul li a.active {
 .hero h2 {
   font-size: 1.25rem;
   font-weight: 400;
-  color: #dfe6e9;
+  color: #f0f4f8; /* improved contrast */
 }
 
 .hero img {
@@ -111,6 +119,11 @@ nav ul li a.active {
   font-weight: 700;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* === GRID LAYOUT === */
 .portfolio-grid {
   display: grid;
@@ -123,7 +136,7 @@ nav ul li a.active {
 .project-card {
   background-color: white;
   padding: 1.75rem;
-  border-radius: 12px;
+  border-radius: var(--radius);
   box-shadow: 0 8px 16px rgba(0,0,0,0.08);
   transition: 0.3s ease all;
   display: flex;
@@ -146,52 +159,66 @@ nav ul li a.active {
   color: #444;
 }
 
-.tech-icon {
-  background-color: #e3f2fd;
-  color: var(--primary);
-  padding: 0.4rem 0.75rem;
-  margin: 0.25rem;
-  border-radius: 6px;
-  font-weight: 600;
-  display: inline-block;
-  transition: 0.3s ease;
-}
-
+/* === CTA BUTTONS === */
 .cta-button {
-  background-color: #28a745; /* Bootstrap green */
+  background-color: var(--accent);
   color: #fff;
   padding: 12px 18px;
   margin: 10px;
   display: inline-block;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: var(--radius);
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .cta-button:hover {
-  background-color: #218838; /* darker green on hover */
+  background-color: #009f7a;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
 }
 
+.cta-button.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+  background-color: white;
+  color: var(--primary);
+}
+
+/* === SOCIAL ICONS === */
 .social-icons {
-  margin-top: 15px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .social-icons a {
-  margin: 0 8px;
-  font-size: 20px;
-  color: #0077b5; /* Example blue for Twitter */
+  color: white;
+  margin: 0 12px;
+  font-size: 22px;
   transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
+  color: #1DA1F2; /* Twitter Blue */
   transform: scale(1.2);
-  color: #0056b3; /* Darker blue */
 }
 
-
-
-
+/* === TECH ICON === */
+.tech-icon {
+  background-color: #e3f2fd;
+  color: var(--primary);
+  padding: 0.4rem 0.75rem;
+  margin: 0.25rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.3s ease;
+}
 
 .tech-icon:hover {
   background-color: var(--accent);
@@ -208,7 +235,7 @@ nav ul li a.active {
 .filter-bar input,
 .filter-btn {
   padding: 0.6rem 1rem;
-  border-radius: 6px;
+  border-radius: var(--radius);
   border: 1px solid #ccc;
   margin: 0.3rem;
   font-size: 1rem;
@@ -224,19 +251,6 @@ nav ul li a.active {
 .filter-btn:hover {
   background-color: var(--hover);
   transform: scale(1.05);
-}
-
-/* === SOCIAL === */
-.social-buttons a {
-  margin: 0 12px;
-  color: var(--primary);
-  font-size: 1.4rem;
-  transition: 0.3s ease;
-}
-
-.social-buttons a:hover {
-  transform: scale(1.15);
-  color: var(--accent);
 }
 
 /* === FOOTER === */
@@ -286,3 +300,10 @@ footer {
   }
 }
 
+@media (max-width: 600px) {
+  .cta-button {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+}
