@@ -208,6 +208,60 @@ html {
   transform: scale(1.2);
 }
 
+
+.icons {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.icons i {
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+.tech-stack i:hover {
+  transform: scale(1.2);
+  color: #00bfa6; /* or a shade matching your theme */
+}
+
+.icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.icon-mask {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: #ffffff; /* 👈 change this to any color (e.g. brand green) */
+  
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.icon-mask:hover {
+  transform: scale(1.2);
+}
+
+
+
+
 /* === TECH ICON === */
 .tech-icon {
   background-color: #e3f2fd;
@@ -307,3 +361,5 @@ footer {
     width: 80%;
   }
 }
+
+

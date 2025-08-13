@@ -3,6 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
   const currentPath = window.location.pathname.split('/').pop();
 
+
+  document.querySelectorAll('.social-icons a').forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    link.style.transform = 'scale(1.3)';
+  });
+  link.addEventListener('mouseleave', () => {
+    link.style.transform = 'scale(1)';
+  });
+});
+
+
+
   navLinks.forEach(link => {
     if (link.getAttribute('href') === currentPath) {
       link.classList.add('active');
